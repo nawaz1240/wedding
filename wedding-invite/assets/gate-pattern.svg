@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 260" width="200" height="260">
+  <defs>
+    <g id="sprig">
+      <path d="M0 0C4-30 6-60 0-96" fill="none" stroke="currentColor" stroke-width="1.6"/>
+      <path d="M0-14C-10-20-20-18-26-10 -16-6-6-8 0-14z"/>
+      <path d="M1-30C11-36 21-34 27-26 17-22 7-24 1-30z"/>
+      <path d="M2-48C-8-54-18-52-24-44-14-40-4-42 2-48z"/>
+      <path d="M3-64C13-70 23-68 29-60 19-56 9-58 3-64z"/>
+      <path d="M1-80C-7-86-15-84-19-77-11-73-3-75 1-80z"/>
+      <path d="M0-96C-2-104 2-110 6-112 8-106 4-100 0-96z"/>
+    </g>
+  </defs>
+  <rect width="200" height="260" fill="#7a7b4e"/>
+  <rect width="200" height="260" fill="#8a8b5a" opacity=".25"/>
+  <!-- shadow layer -->
+  <g fill="#5c5d38" color="#5c5d38" transform="translate(2 2)">
+    <use href="#sprig" transform="translate(40 120) rotate(-18)"/>
+    <use href="#sprig" transform="translate(150 240) rotate(14)"/>
+    <use href="#sprig" transform="translate(120 100) rotate(32) scale(.8)"/>
+    <use href="#sprig" transform="translate(10 250) rotate(25) scale(.7)"/>
+  </g>
+  <!-- highlight layer -->
+  <g fill="#9c9d6c" color="#9c9d6c">
+    <use href="#sprig" transform="translate(40 120) rotate(-18)"/>
+    <use href="#sprig" transform="translate(150 240) rotate(14)"/>
+    <use href="#sprig" transform="translate(120 100) rotate(32) scale(.8)"/>
+    <use href="#sprig" transform="translate(10 250) rotate(25) scale(.7)"/>
+  </g>
+</svg>

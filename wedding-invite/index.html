@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Wedding Invitation</title> <!-- real title is set from config.js -->
+  <meta name="theme-color" content="#7a7b4e">
+
+  <!-- EDIT: link preview text (WhatsApp / iMessage). These must be edited here, not in config.js -->
+  <meta name="description" content="You are invited to the wedding of Zayn & Nora">
+  <meta property="og:title" content="Zayn & Nora - Wedding Invitation">
+  <meta property="og:description" content="You are invited. Tap to open your invitation.">
+  <meta property="og:type" content="website">
+  <!-- <meta property="og:image" content="https://YOUR-SITE.vercel.app/assets/preview.jpg"> -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;600&family=Great+Vibes&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="config.js"></script>
+</head>
+<body class="locked">
+
+  <!-- FRONT COVER -->
+  <div id="gate" role="dialog" aria-label="Wedding invitation cover">
+    <div class="panel pl"></div>
+    <div class="panel pr"></div>
+    <div class="zip" aria-hidden="true"></div>
+    <button id="seal" class="seal" type="button">
+      <span class="seal-mono" id="sealMono"></span>
+      <span class="seal-text" id="gateText"></span>
+    </button>
+  </div>
+
+  <!-- MUSIC TOGGLE -->
+  <button id="music" class="sound" type="button" hidden aria-label="Toggle music">
+    <svg class="on" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M16 9c1.5 1.5 1.5 4.5 0 6M18.5 6.5c3 3 3 8 0 11"/></svg>
+    <svg class="off" viewBox="0 0 24 24"><path d="M4 9v6h4l5 4V5L8 9H4z"/><path d="M17 9l5 6M22 9l-5 6"/></svg>
+  </button>
+
+  <main class="page">
+    <!-- HERO -->
+    <section id="hero">
+      <div class="curtain curtain-l"></div>
+      <div class="curtain curtain-r"></div>
+      <div class="beads bead-l"></div>
+      <div class="beads bead-r"></div>
+      <div class="valance"></div>
+
+      <div class="hero-text">
+        <svg class="heart-mark" viewBox="0 0 24 22"><path d="M12 21S2 14 2 7.5A5 5 0 0 1 12 5a5 5 0 0 1 10 2.5C22 14 12 21 12 21z"/></svg>
+        <p class="headline" id="headline"></p>
+        <div class="divider"><i></i><b>&hearts;</b><i></i></div>
+
+        <h1 class="name" id="groomName"></h1>
+        <p class="people" id="groomInfo"></p>
+        <p class="amp">&amp;</p>
+        <h1 class="name" id="brideName"></h1>
+        <p class="people" id="brideInfo"></p>
+      </div>
+
+      <img class="fountain" src="assets/fountain.svg" alt="">
+    </section>
+
+    <!-- EVERYTHING BELOW IS BUILT FROM config.js -->
+    <div id="content"></div>
+  </main>
+
+  <audio id="bgm" loop preload="none"></audio>
+  <noscript><p style="padding:2rem;text-align:center">Please enable JavaScript to view this invitation.</p></noscript>
+  <script src="script.js"></script>
+</body>
+</html>
